@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fnp_tubes/components/dropdown_default.dart';
 import 'package:fnp_tubes/components/input_jam.dart';
-
+import 'package:quickalert/quickalert.dart';
 import '../components/input_tanggal.dart';
 import '../components/text_field_input.dart';
 
@@ -25,6 +25,15 @@ class _EditKandidatState extends State<EditKandidat> {
 
   String kandidat = 'Kandidat 1';
   List<String> listkandidat = ['Kandidat 1', 'Kandidat 2', 'Kandidat 3'];
+
+  void showAlert() {
+    QuickAlert.show(
+      context: context,
+      title: "Berhasil",
+      text: "Data guru berhasil diubah",
+      type: QuickAlertType.success,
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -162,7 +171,9 @@ class _EditKandidatState extends State<EditKandidat> {
                         width: double.infinity,
                         height: 60,
                         child: ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            showAlert();
+                          },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.indigo.shade900,
                             shape: RoundedRectangleBorder(
