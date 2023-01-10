@@ -1,6 +1,6 @@
 # fnp_tubes
 
-A new Flutter project.
+Project yang dibuat untuk memenuhi Tugas Besar Pengembangan Aplikasi Bergerak (Mobile App Development).
 
 ## Getting Started
 
