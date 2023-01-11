@@ -1,6 +1,11 @@
 # fnp_tubes
 
 Project yang dibuat untuk memenuhi Tugas Besar Pengembangan Aplikasi Bergerak (Mobile App Development).
+Oleh anggota kelompok:
+1. Mohammad Naufal Dirgawan
+2. Muhamad Bilaal Kunaefi
+
+*username = admin untuk masuk ke halaman admin, else halaman reviewer.
 
 ## Getting Started
 
