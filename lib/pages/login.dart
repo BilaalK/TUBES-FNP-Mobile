@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fnp_tubes/components/text_field_input.dart';
 import 'package:fnp_tubes/components/textfield_password.dart';
 import 'package:fnp_tubes/pages/input_kandidat.dart';
+import 'package:fnp_tubes/pages/list_peserta_kandidat.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -83,12 +84,21 @@ class _LoginState extends State<Login> {
                         height: 60,
                         child: ElevatedButton(
                           onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const InputKandidat(),
-                              ),
-                            );
+                            _usernamecontroler.text == 'admin'
+                                ? Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) =>
+                                          const InputKandidat(),
+                                    ),
+                                  )
+                                : Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) =>
+                                          const ListPesertaKandidat(),
+                                    ),
+                                  );
                           },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.indigo.shade900,

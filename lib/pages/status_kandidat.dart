@@ -33,21 +33,16 @@ class _StatusKandidatState extends State<StatusKandidat> {
               .copyWith(fontWeight: FontWeight.bold, color: Colors.black),
         ),
         leading: Card(
-          child: InkWell(
-            onTap: () {
-              Navigator.pop(context);
-            },
-            child: Container(
-              padding: const EdgeInsets.all(4),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(8),
-              ),
-              child: const Icon(
-                Icons.arrow_back_ios_new,
-                color: Colors.black,
-                size: 12,
-              ),
+          child: Container(
+            padding: const EdgeInsets.all(4),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(8),
+            ),
+            child: const Icon(
+              Icons.arrow_back_ios_new,
+              color: Colors.black,
+              size: 12,
             ),
           ),
         ),
@@ -78,9 +73,11 @@ class _StatusKandidatState extends State<StatusKandidat> {
                         colorbox: Colors.white,
                         listnya: listjobtarget,
                         functionnya: (value) {
-                          setState(() {
-                            jobtargetvalue = value!;
-                          });
+                          setState(
+                            () {
+                              jobtargetvalue = value!;
+                            },
+                          );
                         },
                         textnya: 'Job Target'),
                   ],
